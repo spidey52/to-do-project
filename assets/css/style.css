@@ -1,0 +1,12 @@
+#container{
+    background: lightblue;
+    width: 360px;
+    margin: 5rem auto;
+    margin-bottom: 0;
+    border: 2px solid gray;
+    border-radius: 2px;
+}
+
+body{
+    background: yellow;
+}
