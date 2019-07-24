@@ -28,6 +28,11 @@ $("input[type='text']").keypress(function(evnet){
         // change input value to empty
         $(this).val("")
         // create a new li and add to ul
-        $('ul').append(`<li> <span>X</span> ${newTodo} </li>`)
+        $('ul').append(`<li> <span><i class="fas fa-trash-alt"></i></span> ${newTodo} </li>`)
     }
+})
+
+$(".fa-plus").click(function(){
+    $("input[type='text']").toggleClass('hide')
+    // here i can use another method fadeToggle() // this will do the same work
 })
