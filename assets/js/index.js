@@ -21,14 +21,16 @@ $('ul').on("click", "span", function(event){
     event.stopPropagation();
 })
 
-$("input[type='text']").keypress(function(evnet){
+$("input[type='text']").keypress(function(event){
     if(event.which === 13){
         // grabbing new todo text from input
         var newTodo = $(this).val();
         // change input value to empty
         $(this).val("")
         // create a new li and add to ul
-        $('ul').append(`<li> <span><i class="fas fa-trash-alt"></i></span> ${newTodo} </li>`)
+        if (newTodo) {
+            $('ul').append(`<li> <span><i class="fas fa-trash-alt"></i></span> ${newTodo} </li>`)
+        }
     }
 })
 
